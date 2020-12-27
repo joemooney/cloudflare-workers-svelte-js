@@ -27,9 +27,12 @@
 <main>
   <h1>Hello {name}!</h1>
   <p>
+    Here we go with svelte and cloudflare workers!!!
+    <br />
     Created using
-    <a href="https://github.com/jpwilliams/cloudflare-workers-svelte">
-      jpwilliams/cloudflare-workers-svelte
+    <a href="https://github.com/joemooney/cloudflare-workers-svelte-js">
+      joemooney/cloudflare-workers-svelte-js<br />
+      credit to jpwilliams!
     </a>
   </p>
   <p>
