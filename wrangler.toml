@@ -1,9 +1,9 @@
 name = "svelte-worker"
 type = "webpack"
-account_id = ""
+account_id = "c26d4a98663e3abd628090f9a83e44ce"
 workers_dev = true
 route = ""
-zone_id = ""
+zone_id = "0a40584c0bca917bced05debc41273d6"
 webpack_config = "./workers-site/webpack.config.js"
 
 [site]
