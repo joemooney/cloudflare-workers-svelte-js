@@ -33,7 +33,7 @@ const add = (name, price) => {
     });
 };
 
-const edit = (id, name, price) => {
+const update = (id, name, price) => {
     clientStore.update((items) => {
         const updatedItems = items.filter((i) => i.id !== id);
 
@@ -56,7 +56,7 @@ const remove = (id) => {
 export default {
     subscribe: clientStore.subscribe,
     add,
-    edit,
+    update,
     remove,
     items,
 };

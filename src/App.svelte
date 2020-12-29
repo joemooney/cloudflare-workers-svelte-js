@@ -22,7 +22,7 @@
 </style>
 
 <main>
-  <h1>Journal/Notebook/Bookmarks</h1>
+  <h1>Journal</h1>
   <Form bind:id bind:name bind:price />
 
   <Table on:edit={edit} />

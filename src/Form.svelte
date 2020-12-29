@@ -7,7 +7,7 @@
     export let url = "";
     export let price = "";
 
-    $: mode = id ? "edit" : "add";
+    $: mode = id ? "update" : "add";
     $: canSubmit = price !== "" && name !== "";
     function submit() {
         if (!canSubmit) {
@@ -20,8 +20,8 @@
             serverStore.updateItems(clientStore.items());
         }
 
-        if (mode === "edit") {
-            clientStore.edit(id, name, price);
+        if (mode === "update") {
+            clientStore.update(id, name, price);
             serverStore.updateItems(clientStore.items());
         }
 
@@ -69,11 +69,13 @@
             placeholder="Price"
             id="priceField" />
 
+        <!-- Submit button only if all fields are filled out -->
         <button disabled={!canSubmit} class="float-right" type="submit">
             {mode}
         </button>
 
-        {#if mode == 'edit'}
+        <!-- Cancel button only if we are in "update" mode -->
+        {#if mode == 'update'}
             <button on:click={cancel} class="float-right" type="button">
                 Cancel
             </button>
