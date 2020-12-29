@@ -5,6 +5,10 @@ workers_dev = true
 route = ""
 zone_id = "0a40584c0bca917bced05debc41273d6"
 webpack_config = "./workers-site/webpack.config.js"
+kv_namespaces = [ 
+	 { binding = "TODOS2", id = "e032dfdbac744bd7ae1ef693189e069a", preview_id = "f90d1367bcc345c3b0b2a8944b8ff36a" }
+]
+vars = { FOO = "some value", BAR = "some other string" }
 
 [site]
 bucket = "./public"

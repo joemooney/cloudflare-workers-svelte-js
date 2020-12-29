@@ -1,43 +1,29 @@
-<script lang="typescript">
-  export let name: string;
+<script>
+  import Form from "./Form.svelte";
+  import Table from "./Table.svelte";
+  let id = "";
+  let name = "";
+  let price = "";
+  let url = "";
+  function edit(event) {
+    console.log(event.detail);
+    ({ id, name, price } = event.detail);
+  }
 </script>
 
 <style>
   main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+    width: 80%;
     margin: 0 auto;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
   }
 </style>
 
 <main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Here we go with svelte and cloudflare workers!!!
-    <br />
-    Created using
-    <a href="https://github.com/joemooney/cloudflare-workers-svelte-js">
-      joemooney/cloudflare-workers-svelte-js<br />
-      credit to jpwilliams!
-    </a>
-  </p>
-  <p>
-    Visit the
-    <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
-    to learn how to build Svelte apps.
-  </p>
+  <h1>Journal/Notebook/Bookmarks</h1>
+  <Form bind:id bind:name bind:price />
+
+  <Table on:edit={edit} />
 </main>
